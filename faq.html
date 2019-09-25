@@ -1,0 +1,168 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>FAQ</title>
+	<style type="text/css">
+		body{ 
+			padding: 0;
+			margin: 0;
+		}
+		
+		.button{
+			color: #fff;
+			font-size: 20px;
+			background-color: #000;
+			padding:8px 4px;
+			border: none;
+			margin-top: 24.5px;
+			margin-bottom: 0px;
+			position:absolute;
+			
+		}
+		.button:hover,.active1:hover{
+			background-color: #00a2ff;
+			color: #000;
+			transition: .7s;
+		}
+		.active1{
+			font-size: 20px;
+			background-color: #000;
+			padding:8px 4px;
+			border: none;
+			margin-top: 24.5px;
+			margin-bottom: 0px;
+			position:absolute;
+			color: #00a2ff ;
+
+		}
+		.navi{
+			color: white;
+			text-decoration: none;
+		}
+		
+		.nav{
+			color: white;
+			text-decoration: none;
+		}
+		 div.panel {
+        padding: 0 18px;
+        display: none;  
+        background-color: white;
+        overflow: hidden;
+        }
+
+        div.panel.show {
+            display: block !important;
+            content: '\02795';
+        }
+        .accordion {
+            background-color: #eee;
+            color: #black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+        h1 {
+           text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .box{
+          padding: 10px;
+          width: 90%;
+          margin: auto;
+        }
+
+        .active, .accordion:hover {
+            background-color: #00a2ff;
+        }
+
+	    .accordion:after {
+		    content: '\002B';
+		    color: #777;
+		    font-weight: bold;
+		    float: right;
+		    margin-left: 5px;
+		}
+
+        .active:after {
+    	content: "\2212";
+		}
+
+        @media only screen and (min-width: 900px) {
+        .box{
+          padding: 10px;
+          width: 40%;
+          margin: auto;
+          flex: 1;
+        }
+        }
+	</style>
+</head>
+<body style="background-color: black">
+	<div class="navi">
+		
+		<img src="logo 2.png"  height="80px">
+		<button class="button" style="margin-left: 48vw " ><a href="Company website.html" class="navi">Home</a></button>
+		<button class="button" style="margin-left: 53vw "><a href="About us.html" class="navi">About us</a></button>
+		<button class="button" style="margin-left: 59.5vw"><a href="project.html" class="navi">Projects</a></button>
+		<button class="button" style="margin-left: 65.5vw"><a href="contact.html" class="navi">Contact Us</a></button>
+		<button class="active1" style="margin-left: 73.2vw">FAQs</button>
+		
+	</div>
+	<h1 style="font-size: 35px;color: #00a2ff; text-align: center;margin-top: 5vw;font-family: sans-serif;">Frequently Asked Questions(FAQs)</h1>
+	 <div class="box">
+      <button class="accordion"><b>How can I register?</b></button>
+        <div class="panel">
+            <p class="text-light">Visit the registerd office</p>
+        </div>
+    </div>
+     <div class="box">
+      <button class="accordion"><b>Do you provide internships to students?</b></button>
+        <div class="panel">
+            <p class="text-light">Yes, internships are provided to students on the basis of an interview</p>
+        </div>
+    </div>
+     <div class="box">
+      <button class="accordion"><b>What are the documents required to buy a flat?</b></button>
+        <div class="panel">
+            <p class="text-light">Aadhar Card,PAN Card/p>
+        </div>
+    </div>
+     <div class="box">
+      <button class="accordion"><b>Where do Skyline Constructors provide SERVICE?</b></button>
+        <div class="panel">
+            <p class="text-light">Recently we are providing services only in Mumbai and Pune</p>
+        </div>
+    </div>
+     <script type="text/javascript">
+        var acc = document.getElementsByClassName("accordion");
+    var panel = document.getElementsByClassName('panel');
+
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            var setClasses = !this.classList.contains('active');
+            setClass(acc, 'active', 'remove');
+            setClass(panel, 'show', 'remove');
+            
+            if (setClasses) {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show");
+            }
+        }
+    }
+
+    function setClass(els, className, fnName) {
+        for (var i = 0; i < els.length; i++) {
+            els[i].classList[fnName](className);
+        }
+    }
+
+    </script>
+</body>
+</html>

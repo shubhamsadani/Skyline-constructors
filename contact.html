@@ -1,0 +1,183 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+	<style type="text/css">
+		body{ 
+			padding: 0;
+			margin: 0;
+		}
+		
+		.button{
+			color: #fff;
+			font-size: 20px;
+			background-color: #000;
+			padding:8px 4px;
+			border: none;
+			margin-top: 24.5px;
+			margin-bottom: 0px;
+			position:absolute;
+			
+		}
+		.button:hover,.active:hover{
+			background-color: #00a2ff;
+			color: #000;
+			transition: .7s;
+		}
+		.active{
+			font-size: 20px;
+			background-color: #000;
+			padding:8px 4px;
+			border: none;
+			margin-top: 24.5px;
+			margin-bottom: 0px;
+			position:absolute;
+			color: #00a2ff ;
+
+		}
+		.navi{
+			color: white;
+			text-decoration: none;
+		}
+		.active{
+			font-size: 20px;
+			background-color: #000;
+			padding:8px 4px;
+			border: none;
+			margin-top: 24.5px;
+			margin-bottom: 0px;
+			position:absolute;
+			color: #00a2ff ;
+			
+		}
+		.nav{
+			color: white;
+			text-decoration: none;
+		}
+		form{
+			color: white;
+			font-family: sans-serif;
+			margin-left: 22.5vw;
+			font-family: sans-serif;
+			font-size: 20px;
+		}
+		input{
+			background-color: black;
+			border: 1px solid grey;
+			margin-left: 10vw;
+			margin-right: 50vw
+
+			position: absolute; 
+			width: 300px;       
+		}
+		.submit{
+			font-size: 20px;
+			color: #000;
+			padding:8px 4px;
+			border: none;
+			margin-top: 24.5px;
+			margin-bottom: 0px;
+			
+			background-color: #00a2ff ;
+		}
+
+	</style>
+</head>
+<body style="background-color: black">
+	<div class="navi">
+		
+		<img src="logo 2.png"  height="80px">
+		<button class="button" style="margin-left: 48vw " ><a href="Company website.html" class="navi">Home</a></button>
+		<button class="button" style="margin-left: 53vw "><a href="About us.html" class="navi">About us</a></button>
+		<button class="button" style="margin-left: 59.5vw"><a href="project.html" class="navi">Projects</a></button>
+		<button class="active" style="margin-left: 65.5vw">Contact Us</button>
+		<button class="button" style="margin-left: 73.2vw"><a href="faq.html" class="navi">FAQs</a></button>
+		
+	</div>
+	
+		<h1 style="font-size: 35px;color: #00a2ff; margin-left: 22.5vw;margin-top: 5vw;font-family: sans-serif;">Corporate office</h1>
+		<img src="https://media.bizj.us/view/img/9172442/onecitybuilding2cornerviewghostedtower*750xx5000-2813-0-204.jpg" style="float: right;width: 25vw;margin-right: 20vw">
+		<p style="color:white; font-family: sans-serif;margin-left: 22.5vw;font-size: 20px ">Office Space # 406<br>
+		Fourth Floor Rectangle One<br>
+		D-4 District Centre<br>
+		Behind Hotel Sheraton<br>
+		Saket<br>
+		New Delhi - 110017<br><br>
+		<b>Tel :</b> +91-11-40611111<br>
+		<b>Fax	:</b> +91-11-40611110</p>
+	<div style="border-bottom: 1px solid white;width:70vw;margin-left: 15vw;opacity: 0.7;margin-top: 5vw"></div>
+
+	<h1 style="font-size: 35px;color: #00a2ff; margin-left: 22.5vw;margin-top: 5vw;font-family: sans-serif;">Registered office</h1>
+		<img src="https://media.bizj.us/view/img/10269325/2100-south-tryon*750xx1000-563-0-10.jpg" style="float: right;width: 25vw;margin-right: 20vw">
+		<p style="color:white; font-family: sans-serif;margin-left: 22.5vw;font-size: 20px ">Office Space # 406<br>
+		W4D - 204/5, Keshav Kunj<br>
+		Western Avenue, Sainik Farms<br>
+		New Delhi - 110062<br><br>
+		<b>Tel :</b> +91-11-29553230<br>
+		
+	<div style="border-bottom: 1px solid white;width:70vw;margin-left: 15vw;opacity: 0.7;margin-top: 9vw"></div>
+	<h1 style="font-size: 35px;color: #00a2ff; margin-left: 22.5vw;margin-top: 5vw;font-family: sans-serif;">Enuiry</h1>
+
+<form onsubmit="validate()">
+		Name <sup>*</sup> <span>                                                
+		<input type="text" name="uname" id="name"><br><br>
+		Email <sup>*</sup><span>                                                
+		<input type="text" name="email" id="email"><br><br>
+		
+		Phone <sup>*</sup>                                              
+		<input type="text" name="phone" class="phone"><br><br>
+		City                                                              
+		<input type="text" name="city" class="city"><br><br>
+		Comment <sup>*</sup>                                             
+		<input type="text" name="comm" class="comm"><br><br>
+<button type="submit" name="submit" class="submit">Submit</button><br>
+		
+</form>
+<script type="text/javascript">
+		function validate(){
+			
+		var name = document.getElementById("name");
+		//var y=
+		var e = document.getElementById('email');
+		var phone = document.querySelector('.phone');
+		var regex = /\S+@\S+\.\S+/
+		var reg=/^[1-9][0-9]{9}$/
+		var count = 0;
+		//var submit = document.querySelector('.submit');
+		if(name.value=="")
+		{
+			alert("Enter valid name");
+			count++;
+		}
+		
+		if(!e.value.match(regex))
+		{
+			let abc = document.querySelector("#abc");
+			abc.innerHTML = "Enter valid Email";
+
+			setTimeout(()=>abc.remove(),3000);
+
+			count++;
+		}
+		
+		
+		if(!phone.value.match(reg))
+		{
+			alert("Enter valid phone number");
+			count++;
+		}
+
+		if(count == 0){
+			var li = document.createElement("li");
+			li.append(document.createTextNode(`${name.value} will getr a PREMIUM OF 123 `));
+		}
+		
+		
+document.querySelector('.fu').style.background = 'red';
+		}
+
+
+
+	</script>
+</body>
+</html>	
